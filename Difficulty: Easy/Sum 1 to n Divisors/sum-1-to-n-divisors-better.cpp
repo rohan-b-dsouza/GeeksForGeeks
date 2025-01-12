@@ -8,3 +8,6 @@ class Solution {
         return sum;
     }
 };
+
+// T.C => O(n)
+// S.C => o(1)
