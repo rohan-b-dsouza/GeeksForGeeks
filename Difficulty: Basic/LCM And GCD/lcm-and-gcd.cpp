@@ -27,6 +27,8 @@ class Solution {
     }
 };
 
+// T.C => O(log(min(a,b))) -> {log to the base 	Φ as the values of a and b change in each step}
+
 //{ Driver Code Starts.
 int main() {
     int t;
