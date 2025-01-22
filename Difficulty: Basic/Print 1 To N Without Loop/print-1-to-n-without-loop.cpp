@@ -15,7 +15,7 @@ class Solution {
 };
 
 // T.C => O(n)
-// S.C => O(n)
+// S.C => O(n) due to recursive stack space
 
 //{ Driver Code Starts.
 /* Driver program to test printNos */
