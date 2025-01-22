@@ -14,7 +14,7 @@ class Solution {
            }
            else b = b % a;
        }
-       // lcm(a,b) = a * b / gcd(a, b)
+       // lcm(x,y) = x * y / gcd(x, y)
        if (a == 0) { // if a == 0 then gcd = b
            int lcm = (x * y) / b; // as value of a and b gets changed while calculating gcd, therefore we store their
                                   // original values in x and y
