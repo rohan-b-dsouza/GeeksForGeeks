@@ -9,12 +9,9 @@ using namespace std;
 
 class Solution {
   public:
-    int sum = 0;
     int sumOfSeries(int n) {
         if (n == 0) return 0;
-        sum += pow(n, 3);
-        sumOfSeries(n - 1);
-        return sum;
+        return (pow(n, 3) + sumOfSeries(n - 1));
     }
 };
 
