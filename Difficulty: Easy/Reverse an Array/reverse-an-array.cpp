@@ -16,6 +16,11 @@ class Solution {
     }
 };
 
+// Time Complexity:
+// O(n): Each element is swapped at most once.
+// Space Complexity:
+// O(n): Due to the recursive call stack.
+
 //{ Driver Code Starts.
 int main() {
     int t;
