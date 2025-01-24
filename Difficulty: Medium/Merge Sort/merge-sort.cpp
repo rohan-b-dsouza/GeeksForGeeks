@@ -33,7 +33,7 @@ class Solution {
             arr[i] = temp[i - l];
         }
     }
-        
+     
         
     void mergeSort(vector<int>& arr, int l, int r) {
         if (l == r) return;
@@ -43,6 +43,9 @@ class Solution {
         merge(arr, l, r, mid);
     }
 };
+
+// T.C => O(nlog(n))
+// S.C => O(n)
 
 //{ Driver Code Starts.
 
