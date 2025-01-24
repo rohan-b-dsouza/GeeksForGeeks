@@ -19,6 +19,9 @@ class Solution {
     }
 };
 
+// T.C => O(n^2) in worst and avg case and O(n) in best case
+// S.C => O(1)
+
 //{ Driver Code Starts.
 
 int main() {
