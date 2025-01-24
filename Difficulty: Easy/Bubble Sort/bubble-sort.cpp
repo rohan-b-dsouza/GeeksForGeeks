@@ -25,7 +25,7 @@ class Solution {
     }
 };
 
-// T.C => O(n^2)
+// T.C => O(n^2) in avg and worst case, O(n) in best case
 // S.C => O(1)
 
 
