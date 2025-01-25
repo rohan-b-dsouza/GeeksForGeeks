@@ -18,7 +18,7 @@ class Solution {
                 smax = max;
                 max = arr[i];
             }
-            if (arr[i] > smax && arr[i] != max) {
+            else if (arr[i] > smax && arr[i] != max) {
                 smax = arr[i];
             }
         }
