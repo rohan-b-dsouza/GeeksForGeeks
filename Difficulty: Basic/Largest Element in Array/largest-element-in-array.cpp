@@ -10,13 +10,20 @@ using namespace std;
 // } Driver Code Ends
 // User function Template for C++
 
+// Optimal - Approach =>
 class Solution {
   public:
     int largest(vector<int> &arr) {
-        sort(arr.begin(), arr.end());
-        return arr[arr.size() - 1];
+        int maxi = arr[0];
+        for (int i = 1; i < arr.size(); i++) {
+            if (arr[i] > maxi) maxi = arr[i];
+        }
+        return maxi;
     }
 };
+
+// T.C => O(n)
+// S.C => O(1)
 
 
 //{ Driver Code Starts.
