@@ -17,13 +17,17 @@ class Solution {
        for (int j = 0; j < b.size(); j++) {
            st.insert(b[j]);
        }
-       a.clear();
+       vector <int> v;
        for (auto it: st) {
-           a.push_back(it);
+           v.push_back(it);
        }
-       return a;
+       return v;
     }
 };
+
+// T.C => O(n1log(n) + o(n2log(n)) + O(n1 + n2) ................{ n1 stands for elements in array 1 and n2 for array 2 whereas n is the number of elements in the set which varies in each step}
+// S.C => O(n1 + n2) + O(n1 + n2) .............{for extra set and extra vector, Note :- The extra vector is not required to solve the problem but to return the answer}
+
 
 //{ Driver Code Starts.
 int main() {
