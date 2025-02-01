@@ -14,41 +14,25 @@ class Solution {
         int j = 0;
         vector <int> temp;
         while (i < a.size() && j < b.size()) {
-            if (a[i] < b[j]) {
-                if (temp.empty()) {
-                    temp.push_back(a[i]);
+            if (a[i] <= b[j]) {
+                if (temp.empty() || a[i] != temp.back()) {
+                   temp.push_back(a[i]);
                 }
+                i++; 
+            }
+            else {
+                if (temp.empty() || b[j] != temp.back()) {
+                    temp.push_back(b[j]);
+                }
+                j++;
+            }
+        }
+        while (i < a.size()) {
                 if (a[i] != temp.back()) {
                    temp.push_back(a[i]);
                 }
                 i++; 
             }
-            else if (b[j] < a[i]) {
-                if (temp.empty()) {
-                    temp.push_back(b[j]);
-                }
-                else if (b[j] != temp.back()) {
-                    temp.push_back(b[j]);
-                }
-                j++;
-            }
-            else {
-                if (temp.empty()) {
-                    temp.push_back(a[i]);
-                }
-                if (a[i] != temp.back()) {
-                    temp.push_back(a[i]);
-                }
-                i++;
-                j++;
-            }
-        }
-        while (i < a.size()) {
-            if (a[i] != temp.back()) {
-                   temp.push_back(a[i]);
-                }
-                i++;
-        }
         while (j < b.size()) {
             if (b[j] != temp.back()) {
                     temp.push_back(b[j]);
@@ -59,6 +43,9 @@ class Solution {
     }
     
 };
+
+// T.C => O(n + m)
+// S.C => O(n + m) as extra vector is used
 
 //{ Driver Code Starts.
 int main() {
