@@ -4,6 +4,7 @@ using namespace std;
 
 
 // } Driver Code Ends
+// Note :- This gfg qn constraints specify that elements can be positives, negatives, zeroes.
 // Better Solution when only positives and zeros occur, but Optimal Solution when positives,negatives,zeroes occur.
 
 class Solution {
