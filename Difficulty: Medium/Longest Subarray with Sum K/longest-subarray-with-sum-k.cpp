@@ -3,32 +3,29 @@
 using namespace std;
 
 
-// } Driver Code Ends
+// Brute - Force Approach =>
 class Solution {
   public:
     int longestSubarray(vector<int>& arr, int k) {
         int n = arr.size();
         int maxlen = 0;
-        int sum = 0;
-        int len = 0;
-        unordered_map <int, int> prefixSum;
+        int len = -1;
         for (int i = 0; i < n; i++) {
-            sum += arr[i];
-            int rem = sum - k;
-            if (sum == k) {
-                maxlen = max(maxlen, i + 1);
-            }
-            if (prefixSum.find(rem) != prefixSum.end()) {
-                len = i - prefixSum[rem];
-                maxlen = max(maxlen, len);
-            }
-            if (prefixSum.find(sum) == prefixSum.end()) {
-                prefixSum[sum] = i;
+            int sum = 0;
+            for (int j = i; j < n; j++) {
+                sum += arr[j];
+                if (sum == k) {
+                    len = j - i + 1;
+                    maxlen = max(maxlen, len);
+                }
             }
         }
         return maxlen;
     }
 };
+
+// T.C => O(n^2)
+// S.C => O(1)
 
 //{ Driver Code Starts.
 
