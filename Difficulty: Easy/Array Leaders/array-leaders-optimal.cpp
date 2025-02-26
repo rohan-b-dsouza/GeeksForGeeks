@@ -7,6 +7,7 @@ using namespace std;
 
 
 
+
 class Solution {
     // Function to find the leaders in the array.
   public:
@@ -23,6 +24,11 @@ class Solution {
         return ans;
     }
 };
+
+// T.C =. O(N)
+// S.C => O(N)
+
+
 
 
 //{ Driver Code Starts.
