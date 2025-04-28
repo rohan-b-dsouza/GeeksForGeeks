@@ -1,4 +1,4 @@
-// Better - Solution =>
+// Brute - Solution =>
 
 class Solution {
     public long subarrayXor(int arr[], int k) {
