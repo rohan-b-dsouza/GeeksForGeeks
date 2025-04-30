@@ -52,4 +52,4 @@ class Solution {
 }
 
 // T.C => O(n*log(n)) -----------------------{due to merge sort}
-// S.C => O(1)
+// S.C => O(n)
