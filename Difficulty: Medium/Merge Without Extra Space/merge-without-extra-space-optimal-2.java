@@ -22,7 +22,7 @@ class Solution {
                if (left < n && right >= n) {
                 swapIfGreater(a, b, left, right - n);
                 }
-                else if (left >= n && right > n) {
+                else if (left >= n) {
                     swapIfGreater(b, b, left - n, right - n);
                 }
                 else {
@@ -38,5 +38,5 @@ class Solution {
     }
 }
 
-// T.C => O(logn) * O(n) = O(n * log(n)) 
+// T.C => O(log(n+m)) * O(n + m) = O((n+m) * log(n+m)) 
 // S.C => O(1)
