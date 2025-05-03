@@ -1,4 +1,4 @@
-// Optimal - Solution (Shell sort inspired gap method) 
+// Optimal - Solution 2 (Shell sort inspired gap method) 
 
 class Solution {
     // Function to merge the arrays.
