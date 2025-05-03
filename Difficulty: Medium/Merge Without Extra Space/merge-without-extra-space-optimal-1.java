@@ -1,4 +1,4 @@
-// Better Solution 
+// Optimal Solution - 1  
 
 class Solution {
     // Function to merge the arrays.
