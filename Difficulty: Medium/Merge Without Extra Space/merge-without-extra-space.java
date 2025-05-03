@@ -39,4 +39,4 @@ class Solution {
 }
  
 // T.C => O(n+m) + O(n+m) = O(2 * (n+m)) = O(n+m)
-// S.C => O(1)
+// S.C => O(n+m) for the extra array 'temp'
