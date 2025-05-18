@@ -1,4 +1,4 @@
-// Brute
+// Bruteforce (Linear Search)
 
 class Solution {
     int lowerBound(int[] arr, int target) {
