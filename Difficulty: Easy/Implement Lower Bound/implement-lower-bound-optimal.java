@@ -21,5 +21,5 @@ class Solution {
     }
 }
 
-// T.C => O(nlogn)
+// T.C => O(logn)
 // S.C => O(1)
