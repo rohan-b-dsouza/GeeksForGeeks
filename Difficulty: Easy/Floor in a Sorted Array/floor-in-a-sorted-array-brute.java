@@ -1,3 +1,5 @@
+// Brute
+
 class Solution {
 
     static int findFloor(int[] arr, int x) {
@@ -8,3 +10,6 @@ class Solution {
         return -1;//
     }
 }
+
+// T.C - O(n)
+// S.C - O(1)
