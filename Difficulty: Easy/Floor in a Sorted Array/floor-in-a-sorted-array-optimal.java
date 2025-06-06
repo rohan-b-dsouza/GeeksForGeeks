@@ -1,3 +1,5 @@
+// Optimal 
+
 class Solution {
 
     static int findFloor(int[] arr, int x) {
@@ -18,3 +20,6 @@ class Solution {
         return floor;
     }
 }
+
+// T.C => O(log(n))
+// S.C => O(1)
