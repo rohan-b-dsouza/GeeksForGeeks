@@ -1,4 +1,5 @@
-// User function Template for Java
+// Optimal 
+
 class Solution {
     public int findCeil(int[] arr, int x) {
         // code here
@@ -18,3 +19,6 @@ class Solution {
         return ceil;
     }
 }
+
+// T.C => O(log(n))
+// S.C => O(1)
