@@ -1,4 +1,4 @@
-// User function Template for Java
+// Brute
 
 class Solution {
     public int findKRotation(List<Integer> arr) {
@@ -14,3 +14,6 @@ class Solution {
         
     }
 }
+
+// T.C => O(n)
+// S.C => O(1)
