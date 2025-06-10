@@ -1,5 +1,3 @@
-// User function Template for Java
-
 // Optimal 
 
 class Solution {
