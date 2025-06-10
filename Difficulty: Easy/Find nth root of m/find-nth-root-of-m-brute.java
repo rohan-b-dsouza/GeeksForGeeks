@@ -1,4 +1,4 @@
-// User function Template for Java
+// Brute =>
 
 class Solution {
     public int power(int x, int n) {
@@ -25,3 +25,7 @@ class Solution {
         return -1;
     }
 }
+
+
+// T.C => O(m * log(n))
+// S.C => O(1)
