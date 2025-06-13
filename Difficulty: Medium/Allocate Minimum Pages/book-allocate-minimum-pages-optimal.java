@@ -1,5 +1,4 @@
-
-//Back-end complete function Template for Java
+// Optimal
 
 class Solution {
       public static int noOfStudentAllocated (int[] arr, int maxPages, int k) {
@@ -39,4 +38,7 @@ class Solution {
         
     }
 }
+
+// T.C => O(log(sum(arr) - max(arr)) * n) where n is size of array
+// S.C => O(1)
 
