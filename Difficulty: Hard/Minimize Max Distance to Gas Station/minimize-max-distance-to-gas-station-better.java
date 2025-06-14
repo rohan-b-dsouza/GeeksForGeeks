@@ -3,7 +3,7 @@
 class Solution {
     public static double findSmallestMaxDist(int stations[], int k) {
         int n = stations.length;
-        // Creates a PriorityQueue (maxheap) of double stationsay 
+// Creates a PriorityQueue (maxheap) of double array
         PriorityQueue<double[]> pq = new PriorityQueue<>((a, b) -> Double.compare(b[0], a[0]));
         int[] howManySections = new int[n - 1];   // array for storing no of sections between each element
         for (int i = 0; i < n - 1; i++) {
