@@ -27,7 +27,7 @@ class Solution {
             high += nums[i];
         }
         for (int i = low; i <= high; i++) {
-            if (noOfStudentAllocated(nums, i, m) == m) {
+            if (noOfStudentAllocated(nums, i, m) <= m) {
                 return i;
             }
         }
