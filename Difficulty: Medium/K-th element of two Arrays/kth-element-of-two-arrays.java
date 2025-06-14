@@ -1,4 +1,4 @@
-// User function Template for Java
+// Optimal
 
 class Solution {
     public int kthElement(int a[], int b[], int k) {
@@ -27,3 +27,6 @@ class Solution {
     return 0;
     }
 }
+
+// T.C => O(log(min(n1, n2))
+// S.C => O(1)
