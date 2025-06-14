@@ -1,4 +1,4 @@
-// Brute
+// Brute (Same as Split Array Largest Sum Problem and Painter Partition Problem)
 
 class Solution {
     public int noOfStudentAllocated (int[] nums, int maxPages, int m) {
