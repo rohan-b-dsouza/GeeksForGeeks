@@ -27,5 +27,5 @@ class Solution {
     }
 }
 
-// T.C => O()
-// S.C => O()
+// T.C => O(k * n)
+// S.C => O(n - 1)
