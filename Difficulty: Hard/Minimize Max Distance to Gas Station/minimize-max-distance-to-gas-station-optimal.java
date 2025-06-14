@@ -1,7 +1,5 @@
 // Optimal
 
-// User function Template for Java
-
 class Solution {
     
      public static int  numberOfGasStationsRequired(int[] stations, double dist) {
