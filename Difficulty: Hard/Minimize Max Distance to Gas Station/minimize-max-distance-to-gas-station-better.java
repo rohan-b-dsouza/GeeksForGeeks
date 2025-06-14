@@ -5,7 +5,7 @@ class Solution {
         int n = stations.length;
         // Creates a PriorityQueue (maxheap) of double stationsay 
         PriorityQueue<double[]> pq = new PriorityQueue<>((a, b) -> Double.compare(b[0], a[0]));
-        int[] howManySections = new int[n - 1];   // stationsay storing no of sections between each element
+        int[] howManySections = new int[n - 1];   //  storing no of sections between each element
         for (int i = 0; i < n - 1; i++) {
             pq.offer(new double[] {(double) stations[i + 1] - stations[i], i}); // add all {dist, index} pairs to pq
         }
