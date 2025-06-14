@@ -1,4 +1,4 @@
-// Optimal
+// Optimal (Same as Split Array Largest Sum Problem and Painter Partition Problem)
 
 class Solution {
       public static int noOfStudentAllocated (int[] arr, int maxPages, int k) {
