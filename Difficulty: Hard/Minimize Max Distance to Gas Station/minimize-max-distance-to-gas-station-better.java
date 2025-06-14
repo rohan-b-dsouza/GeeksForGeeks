@@ -1,4 +1,4 @@
-// User function Template for Java
+// Better
 
 class Solution {
     public static double findSmallestMaxDist(int stations[], int k) {
@@ -21,6 +21,9 @@ class Solution {
         
     }
 }
+
+// T.C => O(n * log(n)) + O(k * log(n))
+// S.C => O(n - 1) + O(n - 1) => O(n - 1)
 
 
 
