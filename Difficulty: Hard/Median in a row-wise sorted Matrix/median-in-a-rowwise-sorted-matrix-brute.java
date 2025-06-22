@@ -1,4 +1,4 @@
-// User function Template for Java
+// Brute
 
 class Solution {
     int median(int mat[][]) {
@@ -16,3 +16,5 @@ class Solution {
     }
 }
 
+// T.C => O(m * n) + O((n * m) * log (n * m)) => O((n * m) * log (n * m))
+// S.C => O(1)
