@@ -17,4 +17,4 @@ class Solution {
 }
 
 // T.C => O(m * n) + O((m * n) * log (m * n)) => O((m * n) * log (m * n))
-// S.C => O(1)
+// S.C => O(m * n) for extra list used
