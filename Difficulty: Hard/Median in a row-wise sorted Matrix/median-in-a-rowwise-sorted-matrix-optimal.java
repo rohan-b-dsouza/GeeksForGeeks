@@ -1,7 +1,7 @@
 // Optimal
 
 class Solution {
-      public int upperBound(int[] arr, int target) {
+  public int upperBound(int[] arr, int target) {
     int ans = arr.length;
     int low = 0;
     int high = arr.length - 1;
@@ -25,8 +25,9 @@ class Solution {
     }
     return cntSmallerEquals;
   }
-    int median(int mat[][]) {
-      int m = mat.length;
+
+  int median(int mat[][]) {
+    int m = mat.length;
     int n = mat[0].length;
     int low = Integer.MAX_VALUE;
     int high = Integer.MIN_VALUE;
@@ -39,16 +40,13 @@ class Solution {
       int mid = low + (high - low) / 2;
       if (countSmallerEqual(mat, mid, m) > reqd) {
         high = mid - 1;
-      }
-      else {
+      } else {
         low = mid + 1;
       }
     }
     return low;
-        
-    }
+  }
 }
 
 // T.C => O((log (max - min)) * m * log (n))
 // S.C => O(1)
-
