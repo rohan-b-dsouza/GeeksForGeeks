@@ -1,4 +1,4 @@
-// User function Template for Java
+// Optimal
 
 class Solution {
       public int upperBound(int[] arr, int target) {
@@ -49,4 +49,6 @@ class Solution {
     }
 }
 
+// T.C => O((log (max - min)) * m * log (n))
+// S.C => O(1)
 
