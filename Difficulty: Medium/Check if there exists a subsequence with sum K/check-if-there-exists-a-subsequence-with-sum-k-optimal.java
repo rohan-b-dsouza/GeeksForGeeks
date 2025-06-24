@@ -1,4 +1,4 @@
-// User function Template for Java
+// Optimal
 
 class Solution {
     public static boolean checkSum(int index, int k, int[] arr, int n) {
@@ -14,3 +14,6 @@ class Solution {
         return checkSum(0, K, arr, N);
     }
 }
+
+// T.C => O(2^n)
+// S.C => O(n)
