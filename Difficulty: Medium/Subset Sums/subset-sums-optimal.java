@@ -1,4 +1,5 @@
-// User function Template for Java//User function Template for Java
+// Optimal
+
 class Solution {
     public void getSubsetSum(int index, int sum, ArrayList<Integer> ans, int[] arr, int n) {
         if (index == n) { // add sum to list when a subset is formed
@@ -18,3 +19,6 @@ class Solution {
         
     }
 }
+
+// T.C => O(2^n)
+// S.C => O(2^n) + O(n) = O(n) ----------{O(2^n) for output list 'ans' is neglected, we consider only O(n) for the recursion stack}
