@@ -1,3 +1,6 @@
+// Optimal
+// n and v both represent no. of vertices
+
 class Solution {
     boolean isColourPossible(int node, int color, int[] colorsMap, List<List<Integer>> adjacencyList) {
         // checking if adjacent nodes are coloured with current color
@@ -46,3 +49,6 @@ class Solution {
     }
 }
 
+
+// T.C => O(m^n) as there are m color choices for n nodes
+// S.C => O(n) recursion stack + O(n) colorsMap + O(n + 2*E) (adjacency list has n inner lists and total 2*E cells where E is no. of edges) -----{2*E because each edge is stored twice (both directions)}
