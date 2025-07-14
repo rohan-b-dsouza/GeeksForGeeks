@@ -1,4 +1,4 @@
-// User function Template for Java
+// Optimal
 
 class Solution {
     public static int getXorOfRange(int n) {
@@ -12,15 +12,5 @@ class Solution {
     }
 }
 
-
-
-
-// class Solution {
-//     public int findRangeXOR(int l, int r) {
-//          int xor = 0;
-//          for (int i = l; i <= r; i++) {
-//             xor ^= i;
-//          }
-//          return xor;
-//     }
-// }
+// T.C => O(1)
+// S.C => O(1)
