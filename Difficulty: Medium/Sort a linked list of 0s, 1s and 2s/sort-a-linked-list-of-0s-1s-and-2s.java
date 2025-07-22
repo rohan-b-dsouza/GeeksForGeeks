@@ -1,3 +1,5 @@
+// Optimal
+
 /* class Node
 {
     int data;
@@ -39,3 +41,6 @@ class Solution {
         return dummyzero.next;
     }
 }
+
+// T.C => O(n)
+// S.C => O(1)
