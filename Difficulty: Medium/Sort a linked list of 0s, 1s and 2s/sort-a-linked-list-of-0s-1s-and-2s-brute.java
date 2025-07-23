@@ -14,6 +14,7 @@ class Solution {
     static Node segregate(Node head) {
        int zeroes = 0; int ones = 0; int twos = 0;
         Node temp = head;
+        // Count the no. of zeroes, ones, and twos
         while (temp != null) {
             if (temp.data == 0) zeroes++;
             else if (temp.data == 1) ones++;
@@ -21,6 +22,8 @@ class Solution {
             temp = temp.next;
         }
         temp = head;
+        
+        // Overwrite node values based on the counts (first 0s, then 1s, then 2s)
         while (temp != null) {
             if (zeroes > 0) {
                 temp.data = 0;
