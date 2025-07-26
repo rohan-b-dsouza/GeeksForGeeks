@@ -1,3 +1,5 @@
+// Optimal (Iterative)
+
 /*
 class Node{
     int data;
@@ -44,3 +46,6 @@ class Solution {
         return head;
     }
 }
+
+// T.C => O(3 * n)
+// S.C => O(1)
