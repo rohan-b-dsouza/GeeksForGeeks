@@ -1,3 +1,5 @@
+// Recursive
+
 /*
 class Node{
     int data;
@@ -52,3 +54,6 @@ class Solution {
         return head;
     }
 }
+
+// T.C => O(n)
+// S.C => O(n)
