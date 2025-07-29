@@ -22,7 +22,7 @@ class Solution {
                 temp = temp2;
                 temp2 = temp2.bottom;
             }
-          // Additional Condition specific for this problem :-
+          // Additional Condition specific for this problem (This condition is not reqd in the problem :- 'Merge two sorted LL'):-
           // This ensures that the horizontal links for the horizontal list (i.e topmost list) are disconnected
             temp.next = null;
         }
