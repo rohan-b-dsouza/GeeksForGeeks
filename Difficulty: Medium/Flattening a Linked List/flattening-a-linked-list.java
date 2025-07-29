@@ -1,3 +1,5 @@
+// Brute
+
 class Solution {
     // Function to flatten a linked list
     Node flatten(Node root) {
@@ -22,3 +24,6 @@ class Solution {
         
     }
 }
+
+// T.C => O(n * m) + O(n * m) where n stands for no. of nodes in horizontal list  and m stands for no. of nodes in vertical sub-lists
+// S.C => O(n * m) for the extra list
