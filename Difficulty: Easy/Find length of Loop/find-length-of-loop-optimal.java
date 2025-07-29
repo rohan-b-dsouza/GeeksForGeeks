@@ -29,7 +29,7 @@ class Solution {
                     cnt++;
                 }
                 return cnt;
-            }; // Loop is detected
+            };
         }
         // If fast reaches end of loop or null, there is no loop
         return 0;
