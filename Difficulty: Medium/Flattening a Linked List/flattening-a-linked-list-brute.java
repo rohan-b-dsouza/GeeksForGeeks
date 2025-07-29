@@ -29,5 +29,10 @@ class Solution {
     }
 }
 
-// T.C => O(n * m) + O((n * m) * (log (n * m))) +  O(n * m) = O((n * m) * log (n * m)) where n stands for no. of nodes in horizontal list and m stands for no. of nodes in vertical sub-lists
-// S.C => O(n * m) for the extra list
+// T.C => O(n * m) + O(N log N) + O(n * m) = O(N log N)
+//        where n = no. of horizontal nodes (via next)
+//              m = avg. nodes in each bottom list
+//              N = total nodes = n * m
+//
+// S.C => O(N) = O(n * m), for the extra list used to store all node values
+
