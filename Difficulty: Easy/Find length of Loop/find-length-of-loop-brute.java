@@ -1,3 +1,5 @@
+// Brute
+
 /*
 class Node
 {
@@ -25,3 +27,6 @@ class Solution {
         return 0;
     }
 }
+
+// T.C => O(n)
+// S.C => O(n) for the hashmap used
