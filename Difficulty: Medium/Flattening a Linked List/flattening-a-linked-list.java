@@ -5,6 +5,7 @@ class Solution {
     Node flatten(Node root) {
         Node temp = root;
         List<Integer> list = new ArrayList<>();
+        // Store the data of all the nodes in a list
         while (temp != null) {
             Node temp1 = temp;
             while (temp1 != null) {
@@ -13,13 +14,16 @@ class Solution {
             }
             temp = temp.next;
         }
+        // Sort the list
         list.sort(null);
         Node dummyNode = new Node(-1);
         Node curr = dummyNode;
+        // Create a new LL using this sorted list
         for (int num : list) {
             curr.bottom = new Node(num);
             curr = curr.bottom;
         }
+        // Return the new LL
         return dummyNode.bottom;
         
     }
