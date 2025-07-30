@@ -14,36 +14,34 @@ class Node
 }*/
 class Solution {
     static Node deleteAllOccurOfX(Node head, int x) {
-        if (head == null) return head;
-        Node temp = head;
-        while (temp != null) {
-            if (temp.data == x) {
-                if (temp.prev == null && temp.next == null) return null;
-                else if (temp.prev == null) {
-                    Node newHead = head.next;
-                    newHead.prev = null;
-                    head.next = null;
-                    head = newHead;
-                    temp = newHead;
-                }
-                else if (temp.next == null) {
-                    Node newTail = temp.prev;
-                    newTail.next = null;
-                    temp.prev = null;
-                    temp = null;
-                }
-                else{
-                    Node nextNode = temp.next;
-                    temp.prev.next = temp.next;
-                    temp.next.prev = temp.prev;
-                    temp.prev = null;
-                    temp.next = null;
-                    temp = nextNode;
-                }
-            }
-            else temp = temp.next;
+        // If list is empty return null
+    if (head == null) return head;
+    Node temp = head;
+    while (temp != null) {
+        // If current node equals the x data
+      if (temp.data == x) {
+        // If its a head node
+        if (temp == head) {
+          head = head.next;
         }
-        return head;
+        // get the next node to node to be deleted
+        Node nextNode = temp.next;
+        // get the prev node to node to be deleted
+        Node prevNode = temp.prev;
+        // if nextNode exists then link it to the node before the node to be deleted
+        if (nextNode != null) {
+          nextNode.prev = temp.prev;
+        }
+        // if prevNode exists then link it to the node after the node to be deleted
+        if (prevNode != null) {
+          prevNode.next = temp.next;
+        }
+      }
+      // Increment temp pointer to the next node in the LL
+      temp = temp.next;
+    }
+    // Return the head of the LL
+    return head;
         
     }
 }
