@@ -15,12 +15,12 @@ class Node
     }
 }*/
 class Solution {
-    static Node deleteAllOccurOfX(Node head, int x) {
-        // If list is empty return null
+  static Node deleteAllOccurOfX(Node head, int x) {
+    // If list is empty return null
     if (head == null) return head;
     Node temp = head;
     while (temp != null) {
-        // If current node equals the x data
+      // If current node equals the x data
       if (temp.data == x) {
         // If its a head node
         if (temp == head) {
@@ -32,20 +32,24 @@ class Solution {
         Node prevNode = temp.prev;
         // if nextNode exists then link it to the node before the node to be deleted
         if (nextNode != null) {
-          nextNode.prev = temp.prev;
+          nextNode.prev = prevNode;
         }
         // if prevNode exists then link it to the node after the node to be deleted
         if (prevNode != null) {
-          prevNode.next = temp.next;
+          prevNode.next = nextNode;
         }
+        // Delete the current node
+        temp = nextNode;
       }
-      // Increment temp pointer to the next node in the LL
-      temp = temp.next;
+      // If current node's data is not equal to target, increment temp pointer to the next node in
+      // the LL
+      else {
+        temp = temp.next;
+      }
     }
     // Return the head of the LL
     return head;
-        
-    }
+  }
 }
 
 // T.C => O(n)
