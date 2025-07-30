@@ -1,3 +1,5 @@
+// Optimal
+
 // User function Template for Java
 
 /* Structure of Doubly Linked List
@@ -45,3 +47,6 @@ class Solution {
         
     }
 }
+
+// T.C => O(n)
+// S.C => O(1)
