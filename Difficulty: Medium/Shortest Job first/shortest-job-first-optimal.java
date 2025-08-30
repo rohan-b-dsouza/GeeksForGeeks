@@ -1,5 +1,6 @@
-// 
+// Optimal (This problem is exactly the implementation of SJF (Non - preemptive))
 
+// This is written exactly like the SJF non - preemptive algorithm
 class Solution {
     static int solve(int[] bt) {
         Arrays.sort(bt);
@@ -13,3 +14,10 @@ class Solution {
         return Math.floorDiv(totalWaitingTime, n);
     }
 }
+
+// Commonly used way -> (However, both are eventually the same)
+
+
+
+// T.C => O(n)
+// S.C => O(1)
