@@ -17,7 +17,19 @@ class Solution {
 
 // Commonly used way -> (However, both are eventually the same)
 
-
+class Solution {
+    static int solve(int[] bt) {
+        Arrays.sort(bt);
+        int n = bt.length;
+        int totalTime = 0;
+        int waitingTime = 0;
+        for (int i = 0; i < n; i++) {
+            waitingTime += totalTime;
+            totalTime += bt[i];
+        }
+        return Math.floorDiv(waitingTime, n);
+    }
+}
 
 // T.C => O(n)
 // S.C => O(1)
