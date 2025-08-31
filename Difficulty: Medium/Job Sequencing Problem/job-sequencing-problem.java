@@ -1,4 +1,5 @@
-// Optimal
+// Greedy Approach
+// Note :- Optimal Solution is using Disjoint Sets (Graph Topic) Hence, use Disjoint Sets for scheduling jobs in this solution after studying Disjoint Sets
 
 import java.util.*;
 
