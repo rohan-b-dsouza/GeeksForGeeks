@@ -1,3 +1,5 @@
+// Optimal
+
 import java.util.*;
 
 class Solution {
@@ -43,3 +45,6 @@ class Solution {
         return result;
     }
 }
+
+// T.C => O(n * log (n)) for sorting and approx. O(n^2) for scheduling jobs
+// S.C => O(max Deadline)
