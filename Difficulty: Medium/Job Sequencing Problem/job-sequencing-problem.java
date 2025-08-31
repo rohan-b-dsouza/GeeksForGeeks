@@ -5,21 +5,17 @@ class Solution {
     public ArrayList<Integer> jobSequencing(int[] deadline, int[] profit) {
         int n = deadline.length;
 
-        // Prepare jobs as [id, deadline, profit]
-        int[][] Jobs = new int[n][3];
-        for (int i = 0; i < n; i++) {
-            Jobs[i][0] = i + 1;      // Job ID (1-based)
-            Jobs[i][1] = deadline[i];
-            Jobs[i][2] = profit[i];
-        }
+        // Create an array of indices
+        Integer[] idx = new Integer[n];
+        for (int i = 0; i < n; i++) idx[i] = i;
 
-        // Sort jobs by profit descending
-        Arrays.sort(Jobs, (a, b) -> b[2] - a[2]);
+        // Sort indices based on profit descending
+        Arrays.sort(idx, (a, b) -> profit[b] - profit[a]);
 
         // Find maximum deadline
-        int maxDeadline = -1;
+        int maxDeadline = 0;
         for (int i = 0; i < n; i++) {
-            maxDeadline = Math.max(maxDeadline, Jobs[i][1]);
+            maxDeadline = Math.max(maxDeadline, deadline[i]);
         }
 
         // Array to mark allocated slots
@@ -31,15 +27,13 @@ class Solution {
 
         // Schedule jobs
         for (int i = 0; i < n; i++) {
-            int j = Jobs[i][1];
+            int j = deadline[idx[i]];
             // Find the latest available slot <= deadline
-            while (j > 0 && jobDeadlineMap[j] != -1) {
-                j--;
-            }
+            while (j > 0 && jobDeadlineMap[j] != -1) j--;
             if (j > 0) {
-                jobDeadlineMap[j] = Jobs[i][0]; // Allocate job
+                jobDeadlineMap[j] = idx[i]; // Allocate job
                 cntJobs++;
-                maxProfit += Jobs[i][2];
+                maxProfit += profit[idx[i]];
             }
         }
 
