@@ -13,8 +13,11 @@ class Solution {
         for (int i = 0; i < n; i++) idx[i] = i;
 
         // Sort indices based on profit descending
+        Arrays.sort(idx, (a, b) -> Integer.compare(profit[b], profit[a]));
+        /*
         Arrays.sort(idx, (a, b) -> profit[b] - profit[a]);
-
+        This is also allowed, but use of Integer.compare() helps in avoid overflow issues 
+        */
         // Find maximum deadline
         int maxDeadline = 0;
         for (int i = 0; i < n; i++) {
