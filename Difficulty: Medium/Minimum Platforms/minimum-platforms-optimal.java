@@ -3,31 +3,26 @@
 
 class Solution {
     public int minPlatform(int arr[], int dep[]) {
-        // Sort both the arrival and departure times
         Arrays.sort(arr);
         Arrays.sort(dep);
-        int i = 0;
-        int j = 0;
+
+        int i = 0, j = 0;
         int n = arr.length;
-        int cnt = 0;
-        int maxCnt = Integer.MIN_VALUE;
-        // Sweep through the timeline of events (arrivals and departures) 
+        int cnt = 0, maxCnt = 0;
+
+        // Sweep through the timeline of events
         while (i < n) {
-            // If a train arrives before the departure of previous then assign it a new platform
-            if (arr[i] <= dep[j]) {
+            if (arr[i] <= dep[j]) {  // arrival before departure → new platform needed
                 cnt++;
                 i++;
-            }
-                // If a train arrives after the departure of another train, then decrement the platform count as new platform is not reqd
-            else {
+            } else {                 // departure → platform freed
                 cnt--;
                 j++;
             }
-            // At each step track the maximum platform count to get the minimum no. of platforms reqd
-            maxCnt = Math.max(maxCnt, cnt);
+            maxCnt = Math.max(maxCnt, cnt); // track max platforms at any time
         }
+
         return maxCnt;
-        
     }
 }
 
