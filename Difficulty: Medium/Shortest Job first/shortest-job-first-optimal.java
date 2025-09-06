@@ -1,4 +1,4 @@
-// Optimal (This problem is exactly the implementation of SJF (Non - preemptive))
+// Optimal (Greedy) (This problem is exactly the implementation of SJF (Non - preemptive))
 // Note:- Arrival time for all processes is 0 as per problem
 // This is written exactly like the SJF non - preemptive algorithm
 
