@@ -1,4 +1,4 @@
-// Optimal (Sweep Line Algorithm) (Two-Pointer Approach)
+// Optimal (Greedy) (Sweep Line Algorithm) (Two-Pointer Approach)
 // A sweep line algorithm processes events in sorted order by “sweeping” a line across a timeline or space to track overlaps or active elements.
 
 class Solution {
