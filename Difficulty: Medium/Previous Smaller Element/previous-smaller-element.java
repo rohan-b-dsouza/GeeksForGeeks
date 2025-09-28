@@ -1,4 +1,4 @@
-// Optimal
+// Optimal (Monotonic Increasing Stack)
 
 class Solution {
     public static ArrayList<Integer> prevSmaller(int[] arr) {
