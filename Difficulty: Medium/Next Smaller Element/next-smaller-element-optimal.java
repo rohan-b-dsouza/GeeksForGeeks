@@ -1,4 +1,4 @@
-// Optimal
+// Optimal (Monotonic Increasing Stack)
 
 class Solution {
     static ArrayList<Integer> nextSmallerEle(int[] arr) {
