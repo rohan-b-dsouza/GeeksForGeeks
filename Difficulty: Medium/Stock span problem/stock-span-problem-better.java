@@ -34,22 +34,5 @@ class Solution {
     }
 }
 
-// class Solution {
-//     public ArrayList<Integer> calculateSpan(int[] arr) {
-//         int n = arr.length;
-//       ArrayList<Integer> ans = new ArrayList<>();
-//         for (int i = 0; i < n; i++) {
-//             int span = 1;
-//             for (int j = i - 1; j >= 0; j--) {
-//                 if (arr[j] > arr[i]) break;
-//                 span++;
-//             }
-//             ans.add(span);
-//         }
-//         return ans;
-        
-//     }
-// }
-
 // T.C => O(2 * n) + O(n) = O(3 * n) = O(n)
 // S.C => O(2 * n) + O(n) = O(3 * n) = O(n) (However O(n) in calculateSpan function is needed to store the 'ans' so its negligible)
