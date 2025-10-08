@@ -1,3 +1,5 @@
+// Optimal 
+
 class Solution {
     public ArrayList<Integer> calculateSpan(int[] arr) {
         int n = arr.length;
