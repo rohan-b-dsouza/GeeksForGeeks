@@ -78,5 +78,5 @@ class Solution {
     }
 }
 
-// T.C => O(3 * n) = O(n) 
+// T.C => O(n) 
 // S.C => O(2 * n) = O(n)----------{Recursive stack space for the addLeaves() function, and O(n) for the temporary list}
