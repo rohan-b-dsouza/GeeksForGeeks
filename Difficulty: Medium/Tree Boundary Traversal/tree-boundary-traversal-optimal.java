@@ -33,7 +33,7 @@ class Solution {
     // Add the leaf nodes
     public void addLeaves(Node node, List<Integer> ans) {
         // If current node has no left as well as right child add it to the answer
-        if (is (leaf) {
+        if (isLeaf(node)) {
             ans.add(node.data);
             return;
         }
