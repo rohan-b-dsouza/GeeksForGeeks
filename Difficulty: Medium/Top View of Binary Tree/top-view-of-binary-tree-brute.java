@@ -1,4 +1,4 @@
-// Optimal
+// Brute
 
 /*
 class Node {
