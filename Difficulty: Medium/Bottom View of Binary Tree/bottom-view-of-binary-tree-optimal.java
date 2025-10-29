@@ -1,5 +1,5 @@
 // Optimal
-// Same solution as that of the Problem 'Top View of BT'. Just change the statement map.putIfAbsent(col, node.data); to map.put(col, node.data) because we want the last node of every column instead of first 
+// Same solution as that of the optimal solution of the Problem 'Top View of BT'. Just change the statement map.putIfAbsent(col, node.data); to map.put(col, node.data) because we want the last node of every column instead of first 
 // Refer the problem top view for well - commented code
 
 /*
