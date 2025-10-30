@@ -49,6 +49,6 @@ class Solution {
     }
 }
 
-// T.C => O(n + L * h) as we visit each node once and when we reach leaf node we need O(L * h) for creating list 
+// T.C => O(n + L * h) as we visit each node once and when we reach leaf node we need O(L * h) for copying list 
 // S.C => O(h) for the path list and O(h) for the recursive stack  
 // Also ----{h = n for skewed B.T, h = log (n) for balanced B.T}
