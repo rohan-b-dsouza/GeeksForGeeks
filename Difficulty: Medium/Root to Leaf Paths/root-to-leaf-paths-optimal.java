@@ -1,4 +1,4 @@
-// Optimal (DFS - Inorder Traversal)
+// Optimal (DFS - Preorder Traversal)
 
 /*
 
