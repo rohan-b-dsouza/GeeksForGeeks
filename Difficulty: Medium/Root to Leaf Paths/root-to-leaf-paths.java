@@ -21,11 +21,11 @@ class Solution {
     path.add(node.data);
     if (node.left == null && node.right == null) {
       ans.add(new ArrayList<>(path));
-      path.remove(path.size() - 1);
-      return;
     }
-    if (node.left != null) getAllPaths(node.left, path, ans);
+    else {
+        if (node.left != null) getAllPaths(node.left, path, ans);
     if (node.right != null) getAllPaths(node.right, path, ans);
+    }
     path.remove(path.size() - 1);
   }
     public static ArrayList<ArrayList<Integer>> Paths(Node root) {
