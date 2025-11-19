@@ -1,3 +1,5 @@
+// Optimal (Same as the problem 'Ceil of BST' & 'Floor of BST' with minor changes, refer that problem and this problem will also be solved automatically)
+
 /*
 class Node {
     int data;
@@ -10,6 +12,7 @@ class Node {
 */
 
 class Solution {
+    // Get the predecessor
     static Node findPredecessor(Node root, int key) {
         Node node = root;
         Node floor = null;
@@ -24,6 +27,7 @@ class Solution {
         }
         return floor;
     }
+    // Get the successor
     static Node findSuccessor(Node root, int key) {
         Node node = root;
         Node ceil = null;
@@ -42,6 +46,10 @@ class Solution {
         ArrayList<Node> ans = new ArrayList<>();
         ans.add(findPredecessor(root, key));
         ans.add(findSuccessor(root,key));
+        // Return ans
         return ans;
     }
 }
+
+// T.C => O(2 * h) = O(h) -------- {h = log(n) for balanced BST, h = n for skewed BST}
+// S.C => O(1)
