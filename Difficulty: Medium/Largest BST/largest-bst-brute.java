@@ -40,4 +40,4 @@ class Solution {
 }
 
 // T.C => O(n ^ 2)
-// S.C => O(3 * n) = O(n)
+// S.C => O(h)
