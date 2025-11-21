@@ -40,4 +40,4 @@ class Solution {
 }
 
 // T.C => O(n ^ 2)
-// S.C => O(h)
+// S.C => O(h) --------- {h = n skewed BST, h = log (n) balanced BST}
