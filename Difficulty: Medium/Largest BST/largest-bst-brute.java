@@ -1,3 +1,5 @@
+// Brute
+
 // class Node
 // {
 //     int data;
@@ -11,14 +13,12 @@
 // }
 
 class Solution {
-
-    // Return the size of the largest sub-tree which is also a BST
     // Function that counts the nodes in a tree given the root
     static int countNodes(Node root) {
     if (root == null) return 0;
     return 1 + countNodes(root.left) + countNodes(root.right); 
   }
-  // Function to check if the BST is dataid
+  // Function to check if the BST is valid
   static boolean isValidBST(Node root, int min, int max) {
     if (root == null) return true;
     if (root.data <= min || root.data >= max) {
@@ -29,7 +29,7 @@ class Solution {
     static int largestBst(Node root) {
     // If root is null, return 0
     if (root == null) return 0;
-    // If its a dataid BST, return the count of its nodes
+    // If its a valid BST, return the count of its nodes
     if (isValidBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE)) {
         return countNodes(root);
     }
@@ -38,3 +38,6 @@ class Solution {
         
     }
 }
+
+// T.C => O(n ^ 2)
+// S.C => O(3 * n) = O(n)
