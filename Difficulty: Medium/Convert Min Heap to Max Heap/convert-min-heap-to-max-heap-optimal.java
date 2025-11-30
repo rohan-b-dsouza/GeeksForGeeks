@@ -1,4 +1,4 @@
-// User function Template for Java
+// Optimal (This problem is same as the problem 'Build a max-heap from the given array')
 
 class Solution {
     static void heapifyDown(int[] arr, int ind, int n) {
@@ -41,3 +41,6 @@ class Solution {
         buildMaxHeap(arr);
     }
 }
+
+// T.C => O(n)
+// S.C => O(log (n))
