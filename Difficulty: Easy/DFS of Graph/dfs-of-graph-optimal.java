@@ -1,3 +1,5 @@
+// Depth First Search (Refer notion notes)
+
 class Solution {
     public void dfs(int V, ArrayList<ArrayList<Integer>> adj, int[] visited, ArrayList<Integer> ans, int currNode) {
         ans.add(currNode);
@@ -16,3 +18,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(V + E)
+// S.C => O(V) (recursion stack + visited array)
