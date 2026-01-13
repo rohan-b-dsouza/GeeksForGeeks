@@ -6,8 +6,8 @@ class Solution {
         for (int i = 0; i < arr.length; i++) {
             map.merge(arr[i], 1, Integer::sum);
         }
-        for (Integer key : map.keySet()) {
-            ans.add(new ArrayList<>(Arrays.asList(key, map.get(key))));
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            ans.add(new ArrayList<>(Arrays.asList(entry.getKey(), entry.getValue())));
         }
         return ans;
     }
