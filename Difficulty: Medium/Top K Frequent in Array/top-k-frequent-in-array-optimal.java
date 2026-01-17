@@ -1,3 +1,8 @@
+// Optimal
+
+// Logic:- Put the elements in a map as {element : freq}. Now, put each element in the priority queue (min heap) maintaining only k elements in the pq at each step.
+// Finally we will have to top k frequent elements. The comparator of the pq first compares the elements on the basis of their frequency and if two elements have same frequency it compares them on the basis of their value.
+
 class Solution {
     public ArrayList<Integer> topKFreq(int[] arr, int k) {
         ArrayList<Integer> ans = new ArrayList<>();
@@ -25,3 +30,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(n) + O(n * log (k)) + O(k) + O(k) = O(n * log (k))
+// S.C => O(n + k) for the map and the priority queue
