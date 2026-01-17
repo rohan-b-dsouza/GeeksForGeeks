@@ -1,4 +1,5 @@
-// User function Template for Java
+// Optimal
+
 class Pair {
     int row, col;
     Pair(int row, int col) {
@@ -7,6 +8,9 @@ class Pair {
     }
 }
 
+// Logic:- We apply bfs for each unvisited element and for a every connected region we store its path with respect to the base element. Here, the base element is the first element in that region i.e the one on which we called the bfs.
+// This helps us normalize the coordinates with respect to 0,0. Now, at last we return the size of the set as set always stores distinct elements.
+// Since in java, objects are compared based on reference therefore we can't use Set<List<Pairs>> directly, it will require some more code for this Pairs to be compared by values and not references, so instead we use Set<String> here for simplicity.
 
 class Solution {
     
@@ -49,3 +53,6 @@ class Solution {
         
     }
 }
+
+// T.C => O(n * m) + O(n * m * 4) = O(n * m)
+// S.C => O(n * m) + O(n * m) + O(n * m) for the set, visited array, & queue
