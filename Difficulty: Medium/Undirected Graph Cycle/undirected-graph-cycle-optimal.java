@@ -1,3 +1,5 @@
+// Optimal
+
 class Pair {
     int node;
     int parent;
@@ -7,6 +9,9 @@ class Pair {
     this.parent = parent;
   }
 }
+
+// Logic:- Simple bfs while maintaining parent of each node. It helps because whenever we encounter a node which is already visited we check whether this node is same as current node's parent.
+// If not, then it means a cycle is present.
 
 class Solution {
     public boolean bfs(int sourceNode, List<List<Integer>> adj, int[] visited) {
@@ -46,3 +51,6 @@ class Solution {
         return false;
     }
 }
+
+// T.C => O(V + E)
+// S.C => O(V + E)
