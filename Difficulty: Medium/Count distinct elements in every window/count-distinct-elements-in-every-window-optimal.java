@@ -28,4 +28,4 @@ class Solution {
 }
 
 // T.C => O(n)
-// S.C => O(n)
+// S.C => O(k)
