@@ -8,17 +8,12 @@ class Solution {
            map.merge(arr[i], 1, Integer::sum);
        }
        int l = 0;
-       int r = k - 1;
-       while(l < n) {
-        ans.add(map.size());
-        if (map.get(arr[l]) == 1) {
-            map.remove(arr[l]);
-        }
-        else map.put(arr[l], map.get(arr[l]) - 1);
-        if (r < n - 1) r++;
-        else break;
-        map.merge(arr[r], 1, Integer::sum);
-        l++;
+       for (int r = k; r <= n; r++) {
+           ans.add(map.size());
+           map.put(arr[l], map.get(arr[l]) - 1);
+           if (map.get(arr[l]) == 0) map.remove(arr[l]);
+           if (r < n) map.merge(arr[r], 1, Integer::sum);
+           l++;
        }
        return ans;
        
