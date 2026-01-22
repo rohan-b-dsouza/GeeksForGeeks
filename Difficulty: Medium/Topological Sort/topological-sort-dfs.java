@@ -6,12 +6,12 @@
 
 class Solution {
     public void dfs(int sourceNode, ArrayList<ArrayList<Integer>> adj, Deque<Integer> stack, boolean[] visited) {
+        visited[sourceNode] = true;
         for (int node : adj.get(sourceNode)) {
             if (!visited[node]) {
                 dfs(node, adj, stack, visited);
             }
         }
-        visited[sourceNode] = true;
         stack.push(sourceNode);
 
     }
