@@ -44,4 +44,4 @@ class Solution {
 }
 
 // T.C => O(V + E)
-// S.C => O(V + E) adj list + O(V) indegree array + O(V) visited array + O(V) queue = O(V + E)
+// S.C => O(V + E) adj list + O(V) indegree array + O(V) queue = O(V + E)
