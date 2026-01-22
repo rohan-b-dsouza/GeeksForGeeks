@@ -18,7 +18,6 @@ class Solution {
         }
         int[] indegree = new int[V];
         ArrayList<Integer> ans = new ArrayList<>();
-        int[] visited = new int[V];
         Deque<Integer> queue = new ArrayDeque<>();
         for (int i = 0; i < V; i++) {
             for (int node : adj.get(i)) {
