@@ -40,3 +40,6 @@ class Solution {
         return ans;
     }
 }
+
+// T.C => O(V + E)
+// S.C => O(V) visited array + O(V) stack + O(V) recursion stack space + O(V + E) adj list = O(V + E)
