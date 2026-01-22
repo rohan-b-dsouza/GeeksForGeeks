@@ -1,3 +1,9 @@
+// Optimal
+
+// Logic:- Just do a dfs on the graph and in each step while backtracking add the nodes to the stack.
+// Finally, popping elements from the stack will give the topologically sorted order.
+// This is because in each step we add node to the stack only when we go into depth of the graph and a node has no further children which ensures it doesn't come before other node.
+
 class Solution {
     public void dfs(int sourceNode, ArrayList<ArrayList<Integer>> adj, Deque<Integer> stack, boolean[] visited) {
         for (int node : adj.get(sourceNode)) {
