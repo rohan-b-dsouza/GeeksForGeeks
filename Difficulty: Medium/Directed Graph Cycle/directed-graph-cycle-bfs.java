@@ -1,7 +1,7 @@
 // Optimal (BFS - Kahn's Algorithm)
 
 // Logic:- We know that Topological sort is eligible only for a DAG. Hence, if a directed graph has cycles its topological sort will be incorrect and its size will be < V.
-// Therefore, we just call the topoSort() function which gives us the count of the topological sort. If its < V, a cycle is detected, else not.
+// Therefore, we just call the topoSort() function which gives us the count of the topological sort. If it's < V, a cycle is detected, else not.
 
 class Solution {
     public int topoSort(int V, List<List<Integer>> adj) {
