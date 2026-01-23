@@ -22,7 +22,6 @@ class Solution {
     while (!queue.isEmpty()) {
       int node = queue.poll();
       ans++;
-      visited[node] = 1;
       for (int currNode : adj.get(node)) {
         indegree[currNode]--;
         if (indegree[currNode] == 0) queue.offer(currNode);
