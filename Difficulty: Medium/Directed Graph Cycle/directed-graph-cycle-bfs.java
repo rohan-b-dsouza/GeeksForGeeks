@@ -6,7 +6,6 @@
 class Solution {
     public int topoSort(int V, List<List<Integer>> adj) {
     int[] indegree = new int[V];
-    int[] visited = new int[V];
     int ans = 0;
     Deque<Integer> queue = new ArrayDeque<>();
     for (int i = 0; i < V; i++) {
