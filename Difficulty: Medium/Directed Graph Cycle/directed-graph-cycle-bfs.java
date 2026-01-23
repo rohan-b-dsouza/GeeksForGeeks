@@ -24,10 +24,8 @@ class Solution {
       ans++;
       visited[node] = 1;
       for (int currNode : adj.get(node)) {
-        if (visited[currNode] != 1) {
-          indegree[currNode]--;
-          if (indegree[currNode] == 0) queue.offer(currNode);
-        }
+        indegree[currNode]--;
+        if (indegree[currNode] == 0) queue.offer(currNode);
       }
     }
     return ans;
