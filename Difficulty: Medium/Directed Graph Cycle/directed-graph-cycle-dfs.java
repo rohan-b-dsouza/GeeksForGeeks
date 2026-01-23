@@ -1,3 +1,9 @@
+// Optimal
+
+// Logic:- Just perform simple dfs but for each node mark it as 2 meaning that it is visited in current path, and while backtracking remark it to 1, meaning its only visited.
+// This ensures that next path doesn't consider this as revisited i.e its again found in the same path. It makes sure its fresh for new path.
+// However, if we mark a node as 2, and again its found while recursing itself then its a cycle.
+
 class Solution {
     public boolean dfs(int node, List<List<Integer>> adj, int[] visited) {
       visited[node] = 2;
@@ -30,3 +36,6 @@ class Solution {
       return false;
     }
 }
+
+// T.C => O(V + E)
+// S.C => O(V + E)
