@@ -1,3 +1,7 @@
+// Optimal 
+
+// Logic:- Similar to Sum of Subarray Minimums
+
 class Solution {
     public int[] getpgee(int[] arr, int n) {
         int[] pgee = new int[n];
@@ -36,3 +40,6 @@ class Solution {
         return sum;
     }
 }
+
+// T.C => O(5 * n) = O(n)
+// S.C => O(4 * n) = O(n)
