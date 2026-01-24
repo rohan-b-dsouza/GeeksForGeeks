@@ -1,37 +1,23 @@
 class Solution {
-    public static int[] getPse(int[] arr, int n) {
-        int[] pse = new int[n];
-        Deque<Integer> stack = new ArrayDeque<>();
-        for (int i = 0; i < n; i++) {
-            while(!stack.isEmpty() && arr[stack.peek()] >= arr[i]) {
-                stack.pop();
-            }
-            pse[i] = stack.isEmpty() ? -1 : stack.peek();
-            stack.push(i);
-        }
-        return pse;
-    }
-    public static int[] getNse(int[] arr, int n) {
-        int[] nse = new int[n];
-        Deque<Integer> stack = new ArrayDeque<>();
-        for (int i = n - 1; i >= 0; i--) {
-            while(!stack.isEmpty() && arr[stack.peek()] >= arr[i]) {
-                stack.pop();
-            }
-            nse[i] = stack.isEmpty() ? n : stack.peek();
-            stack.push(i);
-        }
-        return nse;
-    }
     public static int getMaxArea(int arr[]) {
         int n = arr.length;
-        int[] pse = getPse(arr, n);
-        int[] nse = getNse(arr, n);
-        long maxArea = Integer.MIN_VALUE;
+        int maxArea = 0;
+        Deque<Integer> stack = new ArrayDeque<>();
         for (int i = 0; i < n; i++) {
-            int totalRects = (nse[i] - pse[i]) - 1;
-            maxArea = Math.max(totalRects * 1L * arr[i], maxArea);
+            while(!stack.isEmpty() && arr[stack.peek()] > arr[i]) {
+                int idx = stack.pop();
+                int nse = i;
+                int pse = stack.isEmpty() ? -1 : stack.peek();
+                maxArea = (int) Math.max((nse - pse - 1) * 1L * arr[idx], maxArea); 
+            }
+            stack.push(i);
         }
-        return (int) maxArea;
+        while(!stack.isEmpty()) {
+            int idx = stack.pop();
+            int nse = n;
+            int pse = stack.isEmpty() ? -1 : stack.peek();
+            maxArea = (int) Math.max((nse - pse - 1) * 1L * arr[idx], maxArea);
+        }
+        return maxArea;
     }
 }
