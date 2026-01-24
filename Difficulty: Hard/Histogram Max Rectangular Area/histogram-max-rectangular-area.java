@@ -29,9 +29,7 @@ class Solution {
         int[] nse = getNse(arr, n);
         long maxArea = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++) {
-            int left = i - pse[i];
-            int right = nse[i] - i;
-            int totalRects = left + right - 1;
+            int totalRects = (nse[i] - pse[i]) - 1;
             maxArea = Math.max(totalRects * 1L * arr[i], maxArea);
         }
         return (int) maxArea;
