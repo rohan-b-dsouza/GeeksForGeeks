@@ -1,36 +1,33 @@
 class Solution {
     public static String smallestWindow(String s, String p) {
         // code here
-        int m = s.length();
-    int n = p.length();
-    int[] hash = new int[256];
-    for (int i = 0; i < n; i++) {
-      hash[p.charAt(i)]++;
-    }
-    int start = -1;
-    int end = -1;
-    int minlen = Integer.MAX_VALUE;
-    int l = 0;
-    int cnt = 0;
-    for (int r = 0; r < m; r++) {
-      char ch = s.charAt(r);
-      if (hash[ch] > 0) {
-        cnt++;
-      }
-      hash[ch]--;
-      while (cnt == n) {
-        if (r - l + 1 < minlen) {
-          minlen = r - l + 1;
-          start = l;
-          end = r;
+        int n = s.length();
+        int m = p.length();
+        Map<Character, Integer> map = new HashMap<>();
+        for (int i = 0; i < m; i++) {
+            map.merge(p.charAt(i), 1, Integer::sum);
         }
-        hash[s.charAt(l)]++;
-        if (hash[s.charAt(l)] > 0) {
-          cnt--;
+        int l = 0; int r = 0;
+        int cnt = 0;
+        int startIdx = -1;
+        int endIdx = -1;
+        int minLen = Integer.MAX_VALUE;
+        while (r < n) {
+            char ch = s.charAt(r);
+            if (map.getOrDefault(ch, 0) > 0) cnt++;
+            map.put(ch, map.getOrDefault(ch, 0) - 1);
+            while (cnt == m) {
+                if (r - l + 1 < minLen) {
+                 minLen = r - l + 1;
+                 endIdx = r;
+                 startIdx = l;
+                }
+                if (map.get(s.charAt(l)) >= 0) cnt--;
+                map.put(s.charAt(l), map.get(s.charAt(l)) + 1);
+                l++;
+            }
+            r++;
         }
-        l++;
-      }
-    }
-    return minlen == Integer.MAX_VALUE ? "" : s.substring(start, end + 1);
+        return startIdx == -1 ? "" : s.substring(startIdx, endIdx + 1);
     }
 }
