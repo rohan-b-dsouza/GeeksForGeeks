@@ -1,12 +1,11 @@
 class Solution {
     boolean twoSum(int arr[], int target) {
         // code here
-        Set<Integer> st = new HashSet<>();
-        for (int i = 0; i < arr.length; i++) {
-            if (st.contains(target - arr[i])) {
-                return true;
-            }
-            st.add(arr[i]);
+        int n = arr.length;
+        Set<Integer> set = new HashSet<>();
+        for (int i = 0; i < n; i++) {
+            if (set.contains(target - arr[i])) return true;
+            set.add(arr[i]);
         }
         return false;
     }
